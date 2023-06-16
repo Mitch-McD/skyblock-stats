@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<!-- 
+    Dungeons Stats page 
+    Version: 0.1
+    Author: Mitchell McDaniel
+-->
+
+<html>
+    <head>
+        <title>Skyblock Dungeons API Reader</title>
+        <script src="skycript_dungeon_stats.js"></script>
+        <style>
+            .numbers {
+                text-align: right
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id='header' class='playername'>[Playername] Skyblock Dungeon Stats</h1>
+            
+        <div id='dungeons'>
+            <!-- Include top 10 recent dungeons (per floor?) -->
+            <!-- Can also include recent treasures and rewards -->
+            <h2 id='cata_level'>Catacombs Level: 0</h2>
+            <h2>Class Levels: </h2>
+            <table>
+                <!-- Class Level columns -->
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>Healer</td>
+                        <td>Mage</td>
+                        <td>Berserker</td>
+                        <td>Archer</td>
+                        <td>Tank</td>
+                    </tr>
+                </thead>
+                <tbody  class='numbers'>
+                    <!-- columns are overridden by JS -->
+                    <tr id='class_levels'>
+                        <td>Level:</td>
+                    </tr>
+                    <!-- columns are overridden by JS -->
+                    <tr id='class_xp'>
+                        <td>EXP:</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan='5'>Currently Selected Class:</td>
+                        <!-- overridden by JS -->
+                        <td id='selected_class'></td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <h2>Dungeon Floor Stats</h2>
+            <table>
+                <!-- Dungeon Stat Table Columns -->
+                <thead>
+                        <td>Floor #</td>
+                        <td>Completions</td>
+                        <td>Times Played</td>
+                        <td>Best Score</td>
+                        <td>Milestone Completed</td>
+                        <td>Fastest Time</td>
+                        <td>Total Mob Kills</td>
+                        <td>Most Mob Kills Per Run</td>
+                </thead>
+                <!-- overridden by JS -->
+                <tbody id='dungeons_floor_stats' class='numbers'>
+                    <tr>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>Most Damage Per Floor By Class</h2>
+            <table>
+                <!-- Max Damage column headers -->
+                <thead>
+                    <tr>
+                        <td>Floor</td>
+                        <td>Healer</td>
+                        <td>Mage</td>
+                        <td>Berserker</td>
+                        <td>Archer</td>
+                        <td>Tank</td>
+                    </tr>
+                </thead>
+                <!-- overridden by JS -->
+                <tbody id='class_dmg' class='numbers'>
+                    <tr>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <div id='armor_div'>
+            <h2 id='armor_header' class='playername'>[Playername] Current Armor:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>Name:</td>
+                        <td>Rarity:</td>
+                        
+                    </tr>
+                </thead>
+                <!-- overridden by JS -->
+                <tbody id='armor_table'>
+                    <tr id='helmet'>
+                        <td>Helmet: </td>
+                        <td>(Empty)</td>
+                    </tr>
+                    <tr id='chestplate'>
+                        <td>Chestplate: </td>
+                        <td>(Empty)</td>
+                    </tr>
+                    <tr id='leggings'>
+                        <td>Leggings: </td>
+                        <td>(Empty)</td>
+                    </tr>
+                    <tr id='boots'>
+                        <td>Boots: </td>
+                        <td>(Empty)</td>
+                    </tr>
+                </tbody>
+            </table>
+            &nbsp;
+        </div>
+        
+    </body>
+</html>
